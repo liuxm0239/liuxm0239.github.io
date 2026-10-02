@@ -698,6 +698,6 @@ snakemake-dagldot -Tpdf > dag.pdf
 snakemake--rulegraph|dot -Tpdf > dag_rules.pdf # 规则之间的运行关系
 # 项目展示
 通过学习上面的内容，根据网上搜索到的一些流程，我自己也写了一个简单的 cut&Tag 数据分析流程，其大致流程如下
-一日
+
 
 主要包含一些上游的数据处理和分析，后续会陆续添加一些分析方法，不断完善。整个项目的布局如下

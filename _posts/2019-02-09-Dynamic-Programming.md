@@ -9,9 +9,9 @@ categories: 计算方法
 #小类配置
 tag: 动态规划
 ---
-
 * content
-{:toc}
+  {:toc}
+
 ---
 
 Dynamic Programming--从菜鸟到老鸟 [转载]
@@ -72,7 +72,6 @@ Fibonacci (n) = Fibonacci(n-1) + Fibonacci(n-2)
 }
 //输入6
 //输出：8
-
 ```
 
 先来分析一下递归算法的执行流程，假如输入6，那么执行的递归树如下：
@@ -88,7 +87,7 @@ public static int Fibonacci(int n)
 {
             if(n<=0)
                             return n;
-                    int []Memo=new int[n+1];      
+                    int []Memo=new int[n+1];    
                             for(int i=0;i<=n;i++)
                                             Memo[i]=-1;
                                     return fib(n, Memo);
@@ -98,7 +97,7 @@ public static int Fibonacci(int n)
 
                     if(Memo[n]!=-1)
                                     return Memo[n];
-                        //如果已经求出了fib（n）的值直接返回，否则将求出的值保存在Memo备忘录中。             
+                        //如果已经求出了fib（n）的值直接返回，否则将求出的值保存在Memo备忘录中。           
                             if(n<=2)
                                             Memo[n]=1;
 
@@ -125,7 +124,7 @@ public static int fib(int n)
                                             for(int i=2;i<=n;i++)
                                                         {
                                                                         Memo[i]=Memo[i-1]+Memo[i-2];
-                                                                                }     
+                                                                                }   
                                                     return Memo[n];
 }
 ```
@@ -146,7 +145,7 @@ public static int fib(int n)
                                                                                 Memo_i=Memo_i_2+Memo_i_1;
                                                                                             Memo_i_2=Memo_i_1;
                                                                                                         Memo_i_1=Memo_i;
-                                                                                                                }     
+                                                                                                                }   
                                                             return Memo_i;
                                                                 }
 ```
@@ -193,7 +192,7 @@ public static int cutMemo(int []p)
         {
                     int []r=new int[p.length+1];
                             for(int i=0;i<=p.length;i++)
-                                            r[i]=-1;                      
+                                            r[i]=-1;                    
                                     return cut(p, p.length, r);
                                         }
     public static int cut(int []p,int n,int []r)
@@ -321,4 +320,4 @@ T = minPTime * (N-2) + (totalSum-minPTime)
 
 # **参考文献**
 
-    1.算法导论
+    1. 《算法导论》
